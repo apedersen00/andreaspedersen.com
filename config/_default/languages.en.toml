@@ -1,0 +1,22 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Andreas Pedersen"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "Hardware engineer, FPGA enthusiast & digital audio nerd."
+
+[params.author]
+  name = "Andreas Pedersen"
+  image = "img/avatar.jpg"
+  headline = "Hardware Engineer"
+  bio = "FPGA & digital design engineer. Interested in audio synthesis, signal processing, and open-source silicon."
+  links = [
+    { github = "https://github.com/apedersen00" },
+    { linkedin = "https://linkedin.com/in/andreas-pedersen" },
+    { email = "mailto:andreas@andreaspedersen.com" },
+  ]
