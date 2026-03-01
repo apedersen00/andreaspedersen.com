@@ -8,15 +8,15 @@ title = "Andreas Pedersen"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  description = "Hardware engineer, FPGA enthusiast & digital audio nerd."
+  description = "Hardware engineer specializing in microelectronics and ASIC design."
 
 [params.author]
   name = "Andreas Pedersen"
   image = "img/avatar.jpg"
-  headline = "Hardware Engineer"
-  bio = "FPGA & digital design engineer. Interested in audio synthesis, signal processing, and open-source silicon."
+  headline = "MSc In Electrical Engineering | IC Design"
+  bio = "Specializing in microelectronics and ASIC design. Passionate about fast, efficient digital algorithms, computer architecture, and mixed-signal design. Currently working with Brain-Computer Interfaces at IMEC."
   links = [
     { github = "https://github.com/apedersen00" },
-    { linkedin = "https://linkedin.com/in/andreas-pedersen" },
-    { email = "mailto:andreas@andreaspedersen.com" },
+    { linkedin = "https://www.linkedin.com/in/andreas-pedersen-6b2933175/" },
+    { email = "mailto:mail@andreaspedersen.com" },
   ]
