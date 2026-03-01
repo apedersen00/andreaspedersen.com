@@ -1,5 +1,5 @@
 ---
-title: "TT6581 — SID-Inspired Audio Synthesizer"
+title: "TT6581: SID-Inspired Audio Synthesizer"
 date: 2026-03-01
 description: "A MOS6581-inspired digital audio synthesizer implemented in SystemVerilog for Tiny Tapeout."
 summary: "Open-source audio synthesizer ASIC inspired by the legendary Commodore 64 SID chip. Three voices, ADSR envelopes, state-variable filter, and delta-sigma DAC — all in 2×2 Tiny Tapeout tiles."
@@ -11,24 +11,21 @@ showTableOfContents: true
 
 {{< github repo="apedersen00/tt6581" >}}
 
-## Overview
+## Introduction
 
-Inspired by the legendary **MOS6581 Sound Interface Device (SID)** chip used in the Commodore 64, the TT6581 is an original digital interpretation supporting nearly the entire original feature set, implemented in 2×2 tiles for [Tiny Tapeout](https://tinytapeout.com/).
+> [!NOTE] This post serves as a deep dive in the design of the TT6581. For a brief overview of the project, visit the projects [Github page](https://github.com/apedersen00/tt6581/).
 
-### Features
+Inspired by the legendary **MOS6581 Sound Interface Device (SID)** chip used in retro computers such as the Commodore 64, the _Tiny Tapeout 6581_ (TT6581) is an original digital interpretation supporting nearly the entire original MOS6581 feature set, implemented in 2x2 tiles for [Tiny Tapeout](https://tinytapeout.com/).
 
-- Full control through a **Serial-Peripheral Interface** (SPI)
-- **Three** independently synthesised voices
-- Four waveform types: triangle, sawtooth, pulse, and noise
-- **ADSR** envelope shaping per voice
-- **Chamberlin State-Variable Filter** (SVF) — LP, HP, BP, and BR modes
-- Second-order **delta-sigma DAC** with 10 MHz PDM output (OSR = 200)
+To demonstrate the chip's capabilities, here is Rob Hubbard's _Monty on the Run_. The track was played using a Verilator RTL testbench, and the final audio was produced by capturing the PDM output and processing it through a 4th-order Bessel filter in Python.
+
+<audio controls src="/audio/monty_on_the_run.mp3"></audio>
 
 ## Architecture
 
 The diagram below shows the datapath in the TT6581. A tick generator triggers the generation of a single audio sample at 50 kHz.
 
-![TT6581 Datapath](tt6581_datapath.png)
+![TT6581 Datapath](svg/tt6581.svg "TT6581 Datapath")
 
 1. **Voice Generation** — One 10-bit voice at a time is generated. Internal phase registers maintain each voice's state while inactive. Supported waveforms are triangle, sawtooth, pulse, and noise.
 
@@ -43,21 +40,6 @@ The diagram below shows the datapath in the TT6581. A tick generator triggers th
 6. **Delta-Sigma PDM** — An error-feedback delta-sigma modulator converts the final mix to 1-bit PDM at 10 MHz.
 
 To fit the strict 2×2 tile area requirement, the entire synthesis pipeline is time-multiplexed — most modules are state machines, and a single **24×16 shared multiplier** handles all arithmetic.
-
-## Pin Mapping
-
-| Pin        | Direction | Function                     |
-| ---------- | --------- | ---------------------------- |
-| `uio[0]`   | Input     | SPI Chip Select (active low) |
-| `uio[1]`   | Input     | SPI MOSI                     |
-| `uio[2]`   | Output    | SPI MISO                     |
-| `uio[3]`   | Input     | SPI SCLK                     |
-| `uio[4:7]` | —         | Unused                       |
-| `uo[0]`    | Output    | PDM audio output             |
-| `uo[1:7]`  | —         | Unused                       |
-| `ui[0:7]`  | —         | Unused                       |
-
-The PDM output should be passed through a **4th-order Bessel low-pass filter** for best analogue reconstruction.
 
 ## Deep Dives
 
