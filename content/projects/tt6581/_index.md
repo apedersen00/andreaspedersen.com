@@ -1,9 +1,9 @@
 ---
 title: "TT6581 — SID-Inspired Audio Synthesizer"
-date: 2025-12-01
+date: 2026-03-01
 description: "A MOS6581-inspired digital audio synthesizer implemented in SystemVerilog for Tiny Tapeout."
 summary: "Open-source audio synthesizer ASIC inspired by the legendary Commodore 64 SID chip. Three voices, ADSR envelopes, state-variable filter, and delta-sigma DAC — all in 2×2 Tiny Tapeout tiles."
-tags: ["fpga", "asic", "audio", "synthesizer", "tiny-tapeout", "systemverilog"]
+tags: ["asic", "audio", "tiny-tapeout", "systemverilog"]
 categories: ["Hardware"]
 weight: 1
 showTableOfContents: true
