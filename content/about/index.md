@@ -14,9 +14,9 @@ My core passion is digital design, implementing fast and efficient algorithms ta
 
 ## Skills
 
-- **RTL & Digital Design:** SysteVerilog, VHDL, ASIC synthesis, Yosys/LibreLane
+- **RTL & Digital Design:** SystemVerilog, VHDL, ASIC synthesis, Yosys/LibreLane, Synopsys Design Compiler, Cadence Innovus
 - **Verification & Validation:** Verilator, CocoTB, HW/SW co-design
-- **Analog & Mixed-Signal:** IC design, gm/id sizing methodology, data converters
+- **Analog & Mixed-Signal:** IC design, gm/id sizing methodology, Cadence Virtuoso
 - **Programming:** C, C++, Python
 - **Tools & Platforms:** Xilinx Zynq, FPGAs, Linux, CI/CD, Git
 
