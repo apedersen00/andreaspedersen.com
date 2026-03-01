@@ -404,5 +404,5 @@ Three Python-based tests run as GitHub Actions on every push. These tests are pe
 
 - **Musical Applications of Microprocessors** - Hal Chamberlin. Source for the Chamberlin State-Variable Filter topology.
 - **Understanding Delta-Sigma Data Converters** - Richard Schreier, Gabor C. Temes. Source for the error-feedback delta-sigma modulator design.
-- [MOS6581 Datasheet](http://www.waitingforfriday.com/wp-content/uploads/2017/01/SID-6581-datasheet.pdf) - Original SID chip reference.
+- [MOS6581 Datasheet](https://ccrma.stanford.edu/~chet/projects/tech_content/6581.pdf) - Original SID chip reference.
 - [Tiny Tapeout](https://tinytapeout.com/) - The open-source ASIC platform used to fabricate the TT6581.
