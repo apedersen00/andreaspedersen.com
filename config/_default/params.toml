@@ -1,7 +1,7 @@
 # -- Theme Parameters --
 # https://blowfish.page/docs/configuration/#theme-parameters
 
-colorScheme = "ocean"
+colorScheme = "github"
 defaultAppearance = "dark"
 autoSwitchAppearance = true
 
@@ -29,14 +29,15 @@ fingerprintAlgorithm = "sha512"
   showScrollToTop = true
 
 [homepage]
-  layout = "profile"
+  layout = "background"
+  homepageImage = "img/silicon-wafer.jpg"
   showRecent = true
   showRecentItems = 6
   showMoreLink = true
   showMoreLinkDest = "/projects/"
   cardView = true
   cardViewScreenWidth = false
-  layoutBackgroundBlur = false
+  layoutBackgroundBlur = true
 
 [article]
   showDate = true
