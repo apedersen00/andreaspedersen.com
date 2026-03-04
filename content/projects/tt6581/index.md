@@ -29,6 +29,8 @@ The goal of this project was to design an original, purely digital audio synthes
 - Chamberlin State-Variable Filter (SVF) for low-pass, high-pass, band-pass and band-reject.
 - Second-order Delta-Sigma DAC.
 
+![TT6581](img/tt6581_pnr.png "Place-and-route layout of the TT6581 in 2x2 Tiny Tapeout tiles.")
+
 To demonstrate the chip's capabilities, here is Rob Hubbard's _Monty on the Run_. The track was played using a Verilator RTL testbench, and the final audio was produced by capturing the PDM output and processing it through a 4th-order Bessel filter in Python.
 
 <audio controls src="/audio/monty_on_the_run.mp3"></audio>
